@@ -1,0 +1,27 @@
+{
+  "name": "self-cli-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuweihan00/self-cli-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fuweihan00/self-cli-test/issues"
+  },
+  "homepage": "https://github.com/fuweihan00/self-cli-test#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-env": "^2.4.1",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}
