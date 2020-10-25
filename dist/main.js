@@ -22,15 +22,11 @@ var mapAction = {
     description: 'install a template',
     examples: ['fwh-test-cli install <project-name>']
   },
-  // config: {
-  //   alias: 'c',
-  //   description: 'config .dxclirc',
-  //   examples: [
-  //     'dx-cli config set <k> <v>',
-  //     'dx-cli config get <k>',
-  //     'dx-cli config remove <k>',
-  //   ],
-  // },
+  config: {
+    alias: 'c',
+    description: 'config .fwhTestCliRc',
+    examples: ['fwh-test-cli config set <k> <v>', 'fwh-test-cli config get <k>', 'fwh-test-cli config remove <k>']
+  },
   '*': {
     alias: '',
     description: 'command not found',

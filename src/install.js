@@ -57,7 +57,7 @@ async function handelRender(files, metal, done) {
       }
     }
   });
-  await Promise.all(promiseArr).catch((err) => console.log(chalk.red(`❌ -> ${err}`)));
+  await Promise.all(promiseArr).catch((err) => console.log(chalk.red(`❌ -> render-${err}`)));
   done();
 }
 
@@ -71,7 +71,7 @@ async function handleAsk(result, projectName) {
         .destination(path.resolve(projectName))
         .use(async (files, metal, done) => {
           const args = require(path.join(result, 'ask.js'));
-          const obj = await inquirer.prompt(args).catch((err) => console.log(chalk.red(`❌ -> ${err}`)));
+          const obj = await inquirer.prompt(args).catch((err) => console.log(chalk.red(`❌ -> ask-${err}`)));
           if (obj) {
             const meta = metal.metadata();
             Object.assign(meta, obj);
@@ -99,11 +99,11 @@ const install = async (projectName) => {
   const loading = ora('download project ......');
   try {
     loading.start();
-    const result = await downloadLocal('fuweihan00', 'master');
+    const result = await downloadLocal('vuessr-test', 'master');
     loading.succeed();
     handleAsk(result, projectName);
   } catch (error) {
-    loading.fail(error);
+    loading.fail('download');
   }
 };
 
